@@ -5,7 +5,7 @@ import Search from './components/Search';
 import {GLOBAL} from './config/constants'
 
 class App extends Component {
- 
+
   state = {
 
     news: []
@@ -31,7 +31,7 @@ class App extends Component {
     return (
 
       <Fragment>
-      <Header titulo= "News"/>
+      <Header titulo= "News Text"/>
       <div className ="container white contenedor-noticias">
 
 <Search getNoticias = {this.getNoticias}/>

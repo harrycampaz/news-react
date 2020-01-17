@@ -2,10 +2,9 @@ import React, { Component, Fragment } from 'react';
 import Header from './components/Header';
 import ListNews from './components/news/ListNews';
 import Search from './components/Search';
-import {GLOBAL} from './config/constants'
 
 class App extends Component {
- 
+
   state = {
 
     news: []
@@ -17,7 +16,7 @@ class App extends Component {
   }
 
   getNoticias =  async (category = 'general') => {
-    const url = `${GLOBAL.url}${GLOBAL.version}top-headlines?country=co&category=${category}&apiKey=${GLOBAL.apiKey}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=co&category=${category}&apiKey=e2e31acf44744967adbfc05c32672e50`;
 
     const response = await fetch(url);
     const news = await response.json();
@@ -31,7 +30,7 @@ class App extends Component {
     return (
 
       <Fragment>
-      <Header titulo= "News"/>
+      <Header titulo= "Noticias Harry"/>
       <div className ="container white contenedor-noticias">
 
 <Search getNoticias = {this.getNoticias}/>

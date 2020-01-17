@@ -31,7 +31,7 @@ class App extends Component {
     return (
 
       <Fragment>
-      <Header titulo= "News"/>
+      <Header titulo= "The News"/>
       <div className ="container white contenedor-noticias">
 
 <Search getNoticias = {this.getNoticias}/>
